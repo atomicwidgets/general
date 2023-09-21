@@ -2,3 +2,11 @@ services:
   assets:
     image: sajjad30sakhti/assets:v0.1.4
     restart: always
+    networks:
+      - webserver
+      - default
+  
+networks:
+  webserver:
+    external:
+      name: webserver
